@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'monorepo-demo'`, () => {
+  it(`should have as title 'custom-component-demo'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('monorepo-demo');
+    expect(app.title).toEqual('custom-component-demo');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('monorepo-demo app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('custom-component-demo app is running!');
   });
 });

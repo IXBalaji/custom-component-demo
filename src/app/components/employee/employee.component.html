@@ -1,0 +1,20 @@
+<!-- employee-list.component.html -->
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.id }}</td>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.position }}</td>
+        <td [appSalaryHighlight]="employee.salary">{{ employee.salary | currency }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
