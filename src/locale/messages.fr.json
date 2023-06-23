@@ -1,0 +1,10 @@
+{
+  "locale": "fr-FR",
+  "translations": {
+    "welcomeMessage": "Bienvenue dans l'application de démonstration de composants personnalisés!",
+    "Id": "IDENTIFIANT",
+    "name": "Nom",
+    "position": "Position",
+    "salary": "Salaire"
+  }
+}

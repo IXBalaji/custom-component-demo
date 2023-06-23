@@ -1,0 +1,10 @@
+{
+  "locale": "en-US",
+  "translations": {
+    "welcomeMessage": "Welcome to custom component demo app!",
+    "Id": "ID",
+    "name": "Name",
+    "position": "Position",
+    "salary": "Salary"
+  }
+}

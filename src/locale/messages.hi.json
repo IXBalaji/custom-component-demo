@@ -1,0 +1,10 @@
+{
+  "locale": "hi",
+  "translations": {
+    "welcomeMessage": "कस्टम घटक डेमो ऐप में आपका स्वागत है!",
+    "Id": "पहचान",
+    "name": "नाम",
+    "position": "पद",
+    "salary": "वेतन"
+  }
+}
