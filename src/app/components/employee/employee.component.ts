@@ -6,9 +6,29 @@ import { EmployeeService } from 'src/app/services/employee.service';
   styleUrls: ['./employee.component.scss']
 })
 export class EmployeeComponent {
-  employees!: any[];
-constructor(private employeeService: EmployeeService) { }
+ employees: Employee[] = [];
+  isLoading = false;
+  error: string | null = null;
+
+  constructor(private employeeService: EmployeeService) {}
+
   ngOnInit() {
-    this.employees = this.employeeService.getEmployees();
+    this.loadEmployees();
+  }
+
+  loadEmployees() {
+    this.isLoading = true;
+    this.error = null;
+
+    this.employeeService.getEmployees().subscribe(
+      (data: Employee[]) => {
+        this.employees = data;
+        this.isLoading = false;
+      },
+      (err) => {
+        this.error = 'Failed to load employees. Please try again later.';
+        this.isLoading = false;
+      }
+    );
   }
 }
