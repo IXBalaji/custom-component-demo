@@ -24,4 +24,27 @@ export class EmployeeService {
   getEmployees() {
     return this.employees;
   }
+
+  addEmployee(employee: Employee): Observable<Employee> {
+    this.employees.push(employee);
+    return of(employee); // Simulating a successful addition
+  }
+
+  updateEmployee(employee: Employee): Observable<Employee> {
+    const index = this.employees.findIndex(emp => emp.id === employee.id);
+    if (index !== -1) {
+      this.employees[index] = employee;
+      return of(employee);
+    }
+    return of(null!); // Simulate no match for the update
+  }
+
+  deleteEmployee(employeeId: number): Observable<boolean> {
+    const index = this.employees.findIndex(emp => emp.id === employeeId);
+    if (index !== -1) {
+      this.employees.splice(index, 1);
+      return of(true);
+    }
+    return of(false);
+  }
 }
